@@ -1,9 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body></body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | ExploraMundo</title>
+    <link rel="stylesheet" href="css/contacto.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Fondo con imágenes difuminadas -->
+    <div class="background-container"></div>
+
+    <header>
+      <h1>ExploraMundo</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="container">
+      <h2>Contáctanos</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <textarea rows="5" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="info">
+        <h3>Información de la Agencia</h3>
+        <p>Dirección: Pergamino 211 , Floresta</p>
+        <p>Teléfono: +54 11 4163-2769</p>
+        <p>Email: aaronsebastianserrano@gmail.com</p>
+
+        <h3>Ubicación</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18..."
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+
+        <h3>Horario</h3>
+        <p>Lunes a Viernes: 9:00 - 18:00</p>
+
+        <h3>Síguenos en redes sociales</h3>
+        <div class="social-icons">
+          <a
+            class="social-icon"
+            href="https://www.facebook.com/Serranooaaron"
+            target="_blank"
+          >
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+          <a
+            class="social-icon"
+            href="https://www.instagram.com/serranooaaron/"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a
+            class="social-icon"
+            href="https://x.com/serranooaaron"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ExploraMundo - Todos los derechos reservados</p>
+    </footer>
+  </body>
 </html>
