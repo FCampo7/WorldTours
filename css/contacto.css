@@ -27,7 +27,7 @@
   }
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica Neue, Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -36,7 +36,7 @@ body {
 }
 
 header {
-  background-color: rgba(0, 119, 204, 0.9);
+  background-color: #f9f9f9;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -48,10 +48,12 @@ header nav {
   margin-top: 0.5rem;
 }
 header nav a {
-  color: white;
+  border-radius: 8px;
+  background-color: #00adb5;
   margin: 0 1rem;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
   transition: all 0.3s ease;
 }
 header nav a:hover {
@@ -158,4 +160,6 @@ footer {
   background-color: #f0f0f0;
   font-size: 0.9rem;
   color: #333;
-}/*# sourceMappingURL=contacto.css.map */
+}
+
+/*# sourceMappingURL=contacto.css.map */
