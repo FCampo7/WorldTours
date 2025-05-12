@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Estilos base */
 * {
   margin: 0;
@@ -37,11 +38,10 @@ h2 {
 .btn-outline-pink {
   color: #00adb5 !important;
   border-color: #00adb5 !important;
-
-  &:hover {
-    background-color: #00adb5 !important;
-    color: #fff !important;
-  }
+}
+.btn-outline-pink:hover {
+  background-color: #00adb5 !important;
+  color: #fff !important;
 }
 
 .btn-detalle {
@@ -51,22 +51,19 @@ h2 {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
-
-  &:hover,
-  &:focus {
-    background-color: #eeeeee;
-    color: #000000 !important;
-    border: 1px solid #00adb5 !important;
-  }
+}
+.btn-detalle:hover, .btn-detalle:focus {
+  background-color: #eeeeee;
+  color: #000000 !important;
+  border: 1px solid #00adb5 !important;
 }
 
 .btn-asesor {
   transition: background-color 0.3s, color 0.3s;
-
-  &:hover {
-    background-color: #00adb5;
-    color: white;
-  }
+}
+.btn-asesor:hover {
+  background-color: #00adb5;
+  color: white;
 }
 
 /* Sección de ofertas carrusel */
@@ -74,11 +71,10 @@ h2 {
   background-color: #393e46;
   border-radius: 20px;
   padding: 20px;
-
-  h2 {
-    color: #fff;
-    text-align: center;
-  }
+}
+#promos h2 {
+  color: #fff;
+  text-align: center;
 }
 
 #promos-carrusel {
@@ -90,45 +86,40 @@ h2 {
   position: relative;
   overflow: hidden;
   width: 400px !important;
-
-  &:hover .card-img-top {
-    transform: scale(1.05);
-  }
+}
+.card:hover .card-img-top {
+  transform: scale(1.05);
 }
 
 .img-hover-container {
   position: relative;
   overflow: hidden;
-
-  img {
-    width: 100%;
-    display: block;
-  }
-
-  .hover-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00adb5;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .hover-title {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  &:hover .hover-overlay {
-    opacity: 1;
-  }
+}
+.img-hover-container img {
+  width: 100%;
+  display: block;
+}
+.img-hover-container .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00adb5;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.img-hover-container .hover-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+.img-hover-container:hover .hover-overlay {
+  opacity: 1;
 }
 
 /* Categorías */
@@ -139,16 +130,15 @@ h2 {
 }
 
 /* Footer */
-footer {
-  h2 {
-    color: #393e46;
-    text-align: center;
-  }
-
-  .social-icon {
-    color: #00adb5;
-    font-size: 32px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
+footer h2 {
+  color: #393e46;
+  text-align: center;
 }
+footer .social-icon {
+  color: #00adb5;
+  font-size: 32px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+/*# sourceMappingURL=index.css.map */

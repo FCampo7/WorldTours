@@ -1,9 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body></body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img id="logo" src="./assets/imagenes/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destinos.html">Destinos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="planes.html">Planes</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success btn-outline-pink"
+                type="submit"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="promos">
+        <h2>Ofertas</h2>
+        <div>
+          <div id="promos-carrusel" class="carousel slide mx-auto">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/imagenes/destinos1.jpg"
+                  class="d-block w-100"
+                  alt="Destino"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/imagenes/destinos2.jpg"
+                  class="d-block w-100"
+                  alt="Destino"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/imagenes/destino3.jpg"
+                  class="d-block w-100"
+                  alt="Destino"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#promos-carrusel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#promos-carrusel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn-ver-producto">Ver oferta</button>
+      </section>
+      <br />
+      <section class="productos py-4">
+        <h2 class="text-center mb-4">Destinos populares</h2>
+        <div class="container">
+          <div class="row justify-content-center gap-3">
+            <!-- Tarjeta 1 -->
+            <div class="card p-0" style="width: 18rem">
+              <div class="img-hover-container">
+                <img
+                  src="./assets/imagenes/destinos1.jpg"
+                  class="card-img-top"
+                  alt="París"
+                />
+                <div class="hover-overlay">
+                  <span class="hover-title">París</span>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <button class="btn btn-primary me-2 btn-detalle">
+                  Ver detalle
+                </button>
+                <button class="btn btn-outline-secondary btn-asesor">
+                  Habla con un asesor
+                </button>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card p-0" style="width: 18rem">
+              <div class="img-hover-container">
+                <img
+                  src="./assets/imagenes/destinos2.jpg"
+                  class="card-img-top"
+                  alt="Praga"
+                />
+                <div class="hover-overlay">
+                  <span class="hover-title">Praga</span>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <button class="btn btn-primary me-2 btn-detalle">
+                  Ver detalle
+                </button>
+                <button class="btn btn-outline-secondary btn-asesor">
+                  Habla con un asesor
+                </button>
+              </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card p-0" style="width: 18rem">
+              <div class="img-hover-container">
+                <img
+                  src="./assets/imagenes/destino3.jpg"
+                  class="card-img-top"
+                  alt="Jordania"
+                />
+                <div class="hover-overlay">
+                  <span class="hover-title">Jordania</span>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <button class="btn btn-primary me-2 btn-detalle">
+                  Ver detalle
+                </button>
+                <button class="btn btn-outline-secondary btn-asesor">
+                  Habla con un asesor
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-light text-center py-4 border-top">
+      <h2 class="mb-3">Contáctanos</h2>
+      <div class="mb-3">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/11275898" target="_blank" class="social-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
