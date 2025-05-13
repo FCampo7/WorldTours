@@ -1,3 +1,8 @@
+$bg: #222831;
+$bg-2: #393e46;
+$text: #eeeeee;
+$accent: #00adb5;
+
 // Fondo animado con imágenes
 .background-container {
   position: fixed;
@@ -15,7 +20,7 @@
   background-blend-mode: overlay;
   filter: blur(10px);
   opacity: 0.7;
-  animation: backgroundMove 20s ease-in-out infinite;
+  animation: backgroundMove 15s ease-in-out infinite;
 }
 
 @keyframes backgroundMove {
@@ -42,31 +47,72 @@ body {
 
 // Header
 header {
-  background-color: #f9f9f9;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
-  text-align: center;
+  background-color: white;
+  color: #333;
+  z-index: 2;
 
-  h1 {
-    margin: 0;
+  .main-title {
+    flex: 0;
+    font-size: 2rem;
+    color: $accent;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #005fa3;
+    }
   }
 
   nav {
-    margin-top: 0.5rem;
+    flex: 1;
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
 
     a {
-      border-radius: 8px;
-      background-color: #00adb5;
-      margin: 0 1rem;
       text-decoration: none;
-      font-size: 1.2rem;
-      padding: 0.5rem;
-      transition: all 0.3s ease;
+      color: #333;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
 
       &:hover {
-        text-decoration: underline;
-        transform: scale(1.1);
+        color: #0077cc;
       }
+    }
+  }
+
+  input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 200px;
+
+    &:focus {
+      border-color: #0077cc;
+      outline: none;
+    }
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background-color: $accent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #005fa3;
+      transform: translateY(-3px);
     }
   }
 }
@@ -105,14 +151,13 @@ form {
 
   button {
     padding: 0.75rem;
-    background-color: #0077cc;
+    background-color: $accent;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-
     &:hover {
       background-color: #005fa3;
       transform: translateY(-3px);
