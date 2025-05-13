@@ -1,4 +1,115 @@
-$bg: #222831;
-$bg-2: #393e46;
-$text: #eeeeee;
+$text: #222831;
+$text-2: #393e46;
+$bg: #eeeeee;
 $accent: #00adb5;
+$accent-2: #ccebed;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue", sans-serif;
+	background-color: $bg;
+	color: $text;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center, $wrap: wrap) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	flex-wrap: $wrap;
+}
+
+#main {
+	@include flex(column, center, center);
+	gap: 50px;
+}
+
+.cabecera {
+	@include flex(row, center, center);
+
+	width: 100%;
+	height: 75px;
+
+	background-color: $text-2;
+	color: $accent;
+
+	border-radius: 5px;
+}
+
+.container-flex {
+	@include flex(row, center, center);
+	gap: 20px;
+}
+
+.card {
+	@include flex(column, center, center);
+
+	width: 275px;
+
+	background-color: $bg;
+
+	border: 1px solid $text-2;
+	border-radius: 10px;
+
+	cursor: pointer;
+
+	.card-header {
+		background-color: $accent-2;
+		color: $text-2;
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.card-body {
+		@include flex(column, center, center);
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+		}
+	}
+
+	&:hover {
+		.card-header {
+			background-color: $accent;
+			color: $bg;
+		}
+	}
+}
+
+.btn {
+	margin: 20px;
+
+	width: 200px;
+	height: 50px;
+
+	border: none;
+	border-radius: 10px;
+
+	background-color: $text-2;
+	color: #eeeeee;
+
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: $accent;
+	color: $text;
+	&:hover {
+		background-color: $accent-2;
+	}
+}
+
+@media (min-width: 768px) {
+	.container-flex {
+		margin: 0 15%;
+	}
+}
