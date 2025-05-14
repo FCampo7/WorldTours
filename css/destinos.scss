@@ -3,6 +3,7 @@ $text-2: #393e46;
 $bg: #eeeeee;
 $accent: #00adb5;
 $accent-2: #ccebed;
+$hover: #00adb5;
 
 * {
 	margin: 0;
@@ -12,6 +13,8 @@ $accent-2: #ccebed;
 
 body {
 	font-family: "Helvetica Neue", sans-serif;
+	font-weight: 400;
+	font-style: italic;
 	background-color: $bg;
 	color: $text;
 }
@@ -46,7 +49,7 @@ body {
 	gap: 20px;
 }
 
-.card {
+.mi-card {
 	@include flex(column, center, center);
 
 	width: 275px;
@@ -58,16 +61,21 @@ body {
 
 	cursor: pointer;
 
-	.card-header {
+	transition: all 0.3s ease-in-out;
+
+	.mi-card-header {
 		background-color: $accent-2;
 		color: $text-2;
 		width: 100%;
 		padding: 10px;
 		text-align: center;
 		border-radius: 10px 10px 0 0;
+		transition: all 0.3s ease-in-out;
 	}
 
-	.card-body {
+	.mi-card-body {
+		padding: 10px;
+
 		@include flex(column, center, center);
 
 		img {
@@ -78,20 +86,22 @@ body {
 	}
 
 	&:hover {
-		.card-header {
+		animation: zoom-in-out 2s ease-in-out;
+
+		.mi-card-header {
 			background-color: $accent;
 			color: $bg;
 		}
 	}
 }
 
-.btn {
+.mi-btn {
 	margin: 20px;
 
-	width: 200px;
+	width: calc(100% - 40px);
 	height: 50px;
 
-	border: none;
+	border: none !important;
 	border-radius: 10px;
 
 	background-color: $text-2;
@@ -100,16 +110,37 @@ body {
 	cursor: pointer;
 }
 
-.btn-primary {
-	background-color: $accent;
-	color: $text;
+.mi-btn-primary {
+	background-color: $accent !important;
+
 	&:hover {
-		background-color: $accent-2;
+		transition: all 0.3s ease-in-out;
+
+		background-color: $accent-2 !important;
+		color: $text !important;
 	}
 }
 
 @media (min-width: 768px) {
 	.container-flex {
 		margin: 0 15%;
+	}
+}
+
+@keyframes zoom-in-out {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.05);
+	}
+	50% {
+		transform: scale(0.95);
+	}
+	75% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
 	}
 }
