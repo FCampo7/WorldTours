@@ -1,3 +1,11 @@
+/* Variables de colores */
+$color-principal: #00adb5;
+$color-secundario: #393e46;
+$color-fondo: #fff7f3;
+$color-blanco: #fff;
+$color-negro: #000000;
+$color-hover: #eeeeee;
+
 /* Estilos base */
 * {
   margin: 0;
@@ -17,15 +25,15 @@ body {
 
 /* Tipografía */
 h2 {
-  color: black;
+  color: $color-negro;
   font-size: 24px;
   text-align: center;
 }
 
 /* Botones */
 .btn-ver-producto {
-  background-color: #fff;
-  color: #00adb5;
+  background-color: $color-blanco;
+  color: $color-principal;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -34,29 +42,29 @@ h2 {
   margin: 0 auto;
 }
 
-.btn-outline-pink {
-  color: #00adb5 !important;
-  border-color: #00adb5 !important;
+.btn-outline {
+  color: $color-principal !important;
+  border-color: $color-principal !important;
 
   &:hover {
-    background-color: #00adb5 !important;
-    color: #fff !important;
+    background-color: $color-principal !important;
+    color: $color-blanco !important;
   }
 }
 
 .btn-detalle {
-  background-color: white;
-  color: #000000 !important;
-  border: 1px solid #00adb5;
+  background-color: $color-blanco;
+  color: $color-negro !important;
+  border: 1px solid $color-principal;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 
   &:hover,
   &:focus {
-    background-color: #eeeeee;
-    color: #000000 !important;
-    border: 1px solid #00adb5 !important;
+    background-color: $color-hover;
+    color: $color-negro !important;
+    border: 1px solid $color-principal !important;
   }
 }
 
@@ -64,19 +72,19 @@ h2 {
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
-    background-color: #00adb5;
-    color: white;
+    background-color: $color-principal;
+    color: $color-blanco;
   }
 }
 
 /* Sección de ofertas carrusel */
 #promos {
-  background-color: #393e46;
+  background-color: $color-secundario;
   border-radius: 20px;
   padding: 20px;
 
   h2 {
-    color: #fff;
+    color: $color-blanco;
     text-align: center;
   }
 }
@@ -91,8 +99,10 @@ h2 {
   overflow: hidden;
   width: 400px !important;
 
-  &:hover .card-img-top {
-    transform: scale(1.05);
+  &:hover {
+    .card-img-top {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -109,18 +119,18 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00adb5;
+    right: 0;
+    background-color: $color-principal;
+    color: $color-negro;
+    text-align: center;
+    padding: 10px;
     opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem;
   }
 
   .hover-title {
-    color: #fff;
+    color: $color-blanco;
     font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
@@ -133,20 +143,20 @@ h2 {
 
 /* Categorías */
 .categorias {
-  border: 2px solid #fff7f3;
+  border: 2px solid $color-fondo;
   border-radius: 20px;
-  background-color: #fff7f3;
+  background-color: $color-fondo;
 }
 
 /* Footer */
 footer {
   h2 {
-    color: #393e46;
+    color: $color-secundario;
     text-align: center;
   }
 
   .social-icon {
-    color: #00adb5;
+    color: $color-principal;
     font-size: 32px;
     margin: 0 10px;
     transition: color 0.3s ease;
