@@ -94,7 +94,10 @@ header button {
   transition: all 0.3s ease;
 }
 header button:hover {
-  background-color: #005fa3;
+  background-color: white;
+  border-color: #00adb5;
+  color: #00adb5;
+  border: 1px solid #00adb5;
   transform: translateY(-3px);
 }
 

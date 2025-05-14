@@ -111,7 +111,10 @@ header {
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #005fa3;
+      background-color: white;
+      border-color: $accent;
+      color: $accent;
+      border: 1px solid $accent;
       transform: translateY(-3px);
     }
   }
