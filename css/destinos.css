@@ -49,6 +49,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
   width: 275px;
   background-color: #eeeeee;
   border: 1px solid #393e46;
@@ -57,10 +58,17 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .mi-card .mi-card-header {
+  font-size: 1.2rem;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
   background-color: #ccebed;
   color: #393e46;
-  width: 100%;
-  padding: 10px;
   text-align: center;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease-in-out;
@@ -82,6 +90,7 @@ body {
   animation: zoom-in-out 2s ease-in-out;
 }
 .mi-card:hover .mi-card-header {
+  opacity: 1;
   background-color: #00adb5;
   color: #eeeeee;
 }
