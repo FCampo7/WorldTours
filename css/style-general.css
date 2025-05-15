@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* Componentes compartidos */
+/* Variables de colores */
+#logo {
+  width: 100px;
+  height: 100px;
+}
+
+.btn-transition {
+  transition: all 0.3s ease !important;
+  background-color: #00adb5 !important;
+}
+.btn-transition:hover {
+  color: #00adb5 !important;
+  background-color: #fff !important;
+  border: 1px solid #00adb5 !important;
+  animation: up-and-down 1s ease;
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Tipografía */
+h2 {
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Footer */
+footer h2 {
+  color: #393e46;
+  text-align: center;
+}
+footer .social-icon {
+  color: #00adb5;
+  font-size: 32px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+footer a {
+  text-decoration: none !important;
+}
+
+/*# sourceMappingURL=style-general.css.map */
