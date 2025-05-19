@@ -1,0 +1,141 @@
+$text: #222831;
+$text-2: #393e46;
+$bg: #eeeeee;
+$accent: #00adb5;
+$accent-2: #ccebed;
+$hover: #00adb5;
+
+@mixin flex($direction: row, $justify: center, $align: center, $wrap: wrap) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	flex-wrap: $wrap;
+}
+
+.container-flex {
+	@include flex(row, center, center);
+	gap: 20px;
+}
+
+.mi-card {
+	@include flex(column, center, center);
+
+	position: relative;
+
+	width: 275px;
+
+	background-color: $bg;
+
+	border-radius: 10px;
+
+	cursor: pointer;
+
+	transition: all 0.3s ease-in-out;
+
+	.mi-card-header {
+		width: 100%;
+		height: 50px;
+		padding: 10px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		opacity: 0;
+
+		background-color: $accent-2;
+		color: $text-2;
+		text-align: center;
+
+		border-radius: 10px 10px 0 0;
+
+		transition: all 0.3s ease-in-out;
+
+		h3 {
+			font-size: 1.2rem;
+		}
+	}
+
+	.mi-card-body {
+		padding: 10px;
+
+		@include flex(column, center, center);
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+		}
+
+		a {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+		}
+	}
+
+	&:hover {
+		animation: zoom-in-out 2s ease-in-out;
+
+		.mi-card-header {
+			opacity: 1;
+
+			background-color: $accent;
+			color: $bg;
+		}
+	}
+}
+
+.mi-btn {
+	margin: 20px;
+
+	width: calc(100% - 40px);
+	height: 50px;
+
+	border: none !important;
+	border-radius: 10px;
+
+	background-color: $text-2;
+	color: #eeeeee;
+
+	cursor: pointer;
+}
+
+.mi-btn-primary {
+	background-color: $accent !important;
+
+	&:hover {
+		transition: all 0.3s ease-in-out;
+
+		background-color: $accent-2 !important;
+		color: $text !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.container-flex {
+		margin: 0 15%;
+	}
+}
+
+@keyframes zoom-in-out {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.05);
+	}
+	50% {
+		transform: scale(0.95);
+	}
+	75% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

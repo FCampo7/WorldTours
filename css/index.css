@@ -1,3 +1,145 @@
+@charset "UTF-8";
+/* Variables de colores */
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Componentes compartidos */
+#logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Tipografía */
+h2 {
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Botones */
+.btn-ver-producto {
+  background-color: #fff;
+  color: #00adb5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-outline {
+  color: #00adb5 !important;
+  border-color: #00adb5 !important;
+}
+.btn-outline:hover {
+  background-color: #00adb5 !important;
+  color: #fff !important;
+}
+
+.btn-detalle {
+  background-color: #fff;
+  color: #000000 !important;
+  border: 1px solid #00adb5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-detalle:hover, .btn-detalle:focus {
+  background-color: #eeeeee;
+  color: #000000 !important;
+  border: 1px solid #00adb5 !important;
+}
+
+.btn-asesor {
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-asesor:hover {
+  background-color: #00adb5;
+  color: #fff;
+}
+
+/* Sección de ofertas carrusel */
+#promos {
+  background-color: #393e46;
+  border-radius: 20px;
+  padding: 20px;
+}
+#promos h2 {
+  color: #fff;
+  text-align: center;
+}
+
+#promos-carrusel {
+  width: 400px;
+}
+
+/* Tarjetas de productos */
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 400px !important;
+}
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.img-hover-container {
+  position: relative;
+  overflow: hidden;
+}
+.img-hover-container img {
+  width: 100%;
+  display: block;
+}
+.img-hover-container .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00adb5;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+.img-hover-container .hover-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+.img-hover-container:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Categorías */
+.categorias {
+  border: 2px solid #fff7f3;
+  border-radius: 20px;
+  background-color: #fff7f3;
+}
+
+/* Footer */
+footer h2 {
+  color: #393e46;
+  text-align: center;
+}
+footer .social-icon {
+  color: #00adb5;
+  font-size: 32px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
 
 /*# sourceMappingURL=index.css.map */

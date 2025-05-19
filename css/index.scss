@@ -1,4 +1,91 @@
-$bg: #222831;
-$bg-2: #393e46;
-$text: #eeeeee;
-$accent: #00adb5;
+/* Variables de colores */
+$color-principal: #00adb5;
+$color-secundario: #393e46;
+$color-fondo: #fff7f3;
+$color-blanco: #fff;
+$color-negro: #000000;
+$color-hover: #eeeeee;
+
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Componentes compartidos */
+#logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Tipografía */
+h2 {
+  color: $color-negro;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Sección de ofertas carrusel */
+#promos {
+  background-color: $color-secundario;
+  border-radius: 20px;
+  padding: 20px;
+
+  h2 {
+    color: $color-blanco;
+    text-align: center;
+  }
+}
+
+#promos-carrusel {
+  width: 400px;
+}
+
+/* Tarjetas de productos */
+
+.img-hover-container {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-principal;
+    color: $color-negro;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem;
+  }
+
+  .hover-title {
+    color: $color-blanco;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &:hover .hover-overlay {
+    opacity: 1;
+  }
+}
+
+/* Categorías */
+.categorias {
+  border: 2px solid $color-fondo;
+  border-radius: 20px;
+  background-color: $color-fondo;
+}
