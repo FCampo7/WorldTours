@@ -5,27 +5,37 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("../assets/img/nyc.jpg"), url("../assets/img/mexico-city.jpg"), url("../assets/img/buenos-aires.jpg"), url("../assets/img/sao-paulo.jpg"), url("../assets/img/lima.jpg");
+  background-image: url("../assets/imagenes/nyc.jpg"),
+    url("../assets/imagenes/mexico-city.jpg"),
+    url("../assets/imagenes/buenos-aires.jpg"),
+    url("../assets/imagenes/sao-paulo.jpg"), url("../assets/imagenes/lima.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  filter: blur(10px);
+  filter: blur(5px);
   opacity: 0.7;
-  animation: backgroundMove 15s ease-in-out infinite;
+  animation: backgroundMove 32s ease-in-out infinite;
+  transition: background-image 1s ease-in-out;
 }
 
 @keyframes backgroundMove {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 0%;
+  }
+  75% {
+    background-position: 50% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
+
 body {
   font-family: Helvetica Neue, Arial, sans-serif;
   margin: 0;
@@ -201,6 +211,5 @@ footer {
   font-size: 0.9rem;
   color: #333;
 }
-
 
 /*# sourceMappingURL=contacto.css.map */
