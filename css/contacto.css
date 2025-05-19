@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("../img/nyc.jpg"), url("../img/mexico-city.jpg"), url("../img/buenos-aires.jpg"), url("../img/sao-paulo.jpg"), url("../img/lima.jpg");
+  background-image: url("../assets/img/nyc.jpg"), url("../assets/img/mexico-city.jpg"), url("../assets/img/buenos-aires.jpg"), url("../assets/img/sao-paulo.jpg"), url("../assets/img/lima.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
