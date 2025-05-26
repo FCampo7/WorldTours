@@ -1,0 +1,22 @@
+$text: #222831;
+$text-2: #393e46;
+$bg: #eeeeee;
+$accent: #00adb5;
+$accent-2: #ccebed;
+$hover: #00adb5;
+
+@use "mixins";
+
+.cabecera {
+	@include mixins.flex(row, center, center);
+
+	margin-bottom: 2rem;
+
+	width: 100%;
+	height: 75px;
+
+	background-color: $text-2;
+	color: $accent;
+
+	border-radius: 5px;
+}
