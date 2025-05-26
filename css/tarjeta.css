@@ -38,6 +38,41 @@
 .mi-card .mi-card-header h3 {
   font-size: 1.2rem;
 }
+.mi-card .mi-badge-hot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgb(222, 37, 57);
+  color: #eeeeee;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: zoom-in-out 2s ease-in-out infinite;
+}
+.mi-card .mi-badge {
+  position: absolute;
+  top: 142px;
+  right: 16px;
+  width: auto;
+  height: 32px;
+  padding: 0 16px;
+  background-color: #00adb5;
+  color: #eeeeee;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .mi-card .mi-card-body {
   padding: 10px;
   display: flex;
@@ -57,6 +92,38 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+.mi-card .mi-card-body .mi-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222831;
+  margin-top: 10px;
+}
+.mi-card .mi-card-body .mi-card-subtitle {
+  font-size: 0.9rem;
+  color: #393e46;
+  margin-top: 5px;
+}
+.mi-card .mi-card-body .mi-card-price {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 235px;
+  align-self: flex-start;
+  border-top: 1px solid #393e46;
+  font-size: 1rem;
+  color: #222831;
+}
+.mi-card .mi-card-body .mi-card-price p {
+  margin: 0;
+  padding: 0;
+}
+.mi-card .mi-card-body .mi-card-price .mi-price {
+  font-size: 1.2rem;
+}
+.mi-card .mi-card-body .mi-card-price .mi-card-light {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #393e46;
 }
 .mi-card:hover {
   animation: zoom-in-out 2s ease-in-out;

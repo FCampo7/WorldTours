@@ -1,4 +1,39 @@
-$bg: #222831;
-$bg-2: #393e46;
-$text: #eeeeee;
+$text: #222831;
+$text-2: #393e46;
+$bg: #eeeeee;
 $accent: #00adb5;
+$accent-2: #ccebed;
+$hover: #00adb5;
+
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: $bg;
+  color: $text;
+}
+
+#main {
+  @include mixins.flex(column, center, center);
+  gap: 50px;
+}
+
+.cabecera {
+  @include mixins.flex(row, center, center);
+
+  width: 100%;
+  height: 75px;
+
+  background-color: $text-2;
+  color: $accent;
+
+  border-radius: 5px;
+}
