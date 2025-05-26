@@ -6,91 +6,107 @@ $accent-2: #ccebed;
 $hover: #00adb5;
 
 @mixin flex($direction: row, $justify: center, $align: center, $wrap: wrap) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-  flex-wrap: $wrap;
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	flex-wrap: $wrap;
 }
 
 .container-flex {
-  @include flex(row, center, center);
-  gap: 20px;
+	@include flex(row, center, center);
+	gap: 20px;
 }
 
 .mi-card {
-  @include flex(column, center, center);
+	@include flex(column, center, center);
 
-  position: relative;
+	position: relative;
 
-  width: 275px;
+	width: 275px;
 
-  background-color: $bg;
+	background-color: $bg;
 
-  border-radius: 10px;
+	border-radius: 10px;
 
-  cursor: pointer;
+	cursor: pointer;
 
-  transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 
-  .mi-card-header {
-    width: 100%;
-    height: 50px;
-    padding: 10px;
+	.mi-card-header {
+		width: 100%;
+		height: 50px;
+		padding: 10px;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
 
-    opacity: 0;
+		opacity: 0;
 
-    background-color: $accent-2;
-    color: $text-2;
-    text-align: center;
+		background-color: $accent-2;
+		color: $text-2;
+		text-align: center;
 
-    border-radius: 10px 10px 0 0;
+		border-radius: 10px 10px 0 0;
 
-    transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 
-    h3 {
-      font-size: 1.2rem;
-    }
-  }
+		h3 {
+			font-size: 1.2rem;
+		}
+	}
 
-	.mi-card-badge {
+	.mi-badge-hot {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		width: 32px;
+		height: 32px;
+
+		border-radius: 50%;
+		background-color: rgb(222, 37, 57);
+		color: $bg;
+
+		font-size: 1.2rem;
+		@include flex(row, center, center);
+
+		animation: zoom-in-out 2s ease-in-out infinite;
+	}
+
+	.mi-badge {
 		position: absolute;
 		top: 142px;
 		right: 16px;
 
-		.mi-badge {
-			width: auto;
-			height: 32px;
-			padding: 0 16px;
+		width: auto;
+		height: 32px;
 
-			background-color: $accent;
-			color: $bg;
+		padding: 0 16px;
 
-			border-radius: 8px;
+		background-color: $accent;
+		color: $bg;
 
-			font-size: 0.8rem;
-			font-weight: bold;
+		border-radius: 8px;
 
-			@include flex(row, center, center);
-		}
+		font-size: 0.8rem;
+		font-weight: bold;
+
+		@include flex(row, center, center);
 	}
 
 	.mi-card-body {
 		padding: 10px;
 
+		@include flex(column, center, center);
 
-    @include flex(column, center, center);
-
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+		}
 
 		a {
 			display: flex;
@@ -136,64 +152,64 @@ $hover: #00adb5;
 		}
 	}
 
-  &:hover {
-    animation: zoom-in-out 2s ease-in-out;
+	&:hover {
+		animation: zoom-in-out 2s ease-in-out;
 
-    .mi-card-header {
-      opacity: 1;
+		.mi-card-header {
+			opacity: 1;
 
-      background-color: $accent;
-      color: $bg;
-    }
-  }
+			background-color: $accent;
+			color: $bg;
+		}
+	}
 }
 
 .mi-btn {
-  margin: 20px;
+	margin: 20px;
 
-  width: calc(100% - 40px);
-  height: 50px;
+	width: calc(100% - 40px);
+	height: 50px;
 
-  border: none !important;
-  border-radius: 10px;
+	border: none !important;
+	border-radius: 10px;
 
-  background-color: $text-2;
-  color: #eeeeee;
+	background-color: $text-2;
+	color: #eeeeee;
 
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .mi-btn-primary {
-  background-color: $accent !important;
+	background-color: $accent !important;
 
-  &:hover {
-    transition: all 0.3s ease-in-out;
+	&:hover {
+		transition: all 0.3s ease-in-out;
 
-    background-color: $accent-2 !important;
-    color: $text !important;
-  }
+		background-color: $accent-2 !important;
+		color: $text !important;
+	}
 }
 
 @media (min-width: 768px) {
-  .container-flex {
-    margin: 0 15%;
-  }
+	.container-flex {
+		margin: 0 15%;
+	}
 }
 
 @keyframes zoom-in-out {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.05);
-  }
-  50% {
-    transform: scale(0.95);
-  }
-  75% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.05);
+	}
+	50% {
+		transform: scale(0.95);
+	}
+	75% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
