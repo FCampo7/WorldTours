@@ -58,6 +58,45 @@ $hover: #00adb5;
 		}
 	}
 
+	.mi-badge-hot {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		width: 32px;
+		height: 32px;
+
+		border-radius: 50%;
+		background-color: rgb(222, 37, 57);
+		color: $bg;
+
+		font-size: 1.2rem;
+		@include flex(row, center, center);
+
+		animation: zoom-in-out 2s ease-in-out infinite;
+	}
+
+	.mi-badge {
+		position: absolute;
+		top: 142px;
+		right: 16px;
+
+		width: auto;
+		height: 32px;
+
+		padding: 0 16px;
+
+		background-color: $accent;
+		color: $bg;
+
+		border-radius: 8px;
+
+		font-size: 0.8rem;
+		font-weight: bold;
+
+		@include flex(row, center, center);
+	}
+
 	.mi-card-body {
 		padding: 10px;
 
@@ -75,6 +114,41 @@ $hover: #00adb5;
 			justify-content: center;
 			align-items: center;
 			text-decoration: none;
+		}
+		.mi-card-title {
+			font-size: 1.2rem;
+			font-weight: bold;
+			color: $text;
+			margin-top: 10px;
+		}
+		.mi-card-subtitle {
+			font-size: 0.9rem;
+			color: $text-2;
+			margin-top: 5px;
+		}
+
+		.mi-card-price {
+			margin-top: 10px;
+			margin-left: 10px;
+			width: 235px;
+
+			align-self: flex-start;
+			border-top: 1px solid $text-2;
+
+			font-size: 1rem;
+			color: $text;
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			.mi-price {
+				font-size: 1.2rem;
+			}
+			.mi-card-light {
+				font-size: 0.8rem;
+				font-weight: 400;
+				color: $text-2;
+			}
 		}
 	}
 
