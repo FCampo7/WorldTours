@@ -5,10 +5,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("../assets/imagenes/nyc.jpg"),
-    url("../assets/imagenes/mexico-city.jpg"),
-    url("../assets/imagenes/buenos-aires.jpg"),
-    url("../assets/imagenes/sao-paulo.jpg"), url("../assets/imagenes/lima.jpg");
+  background-image: url("../assets/imagenes/nyc.jpg"), url("../assets/imagenes/mexico-city.jpg"), url("../assets/imagenes/buenos-aires.jpg"), url("../assets/imagenes/sao-paulo.jpg"), url("../assets/imagenes/lima.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +32,6 @@
     background-position: 0% 0%;
   }
 }
-
 body {
   font-family: Helvetica Neue, Arial, sans-serif;
   margin: 0;
