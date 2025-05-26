@@ -1,0 +1,111 @@
+$text: #222831;
+$text-2: #393e46;
+$bg: #eeeeee;
+$accent: #00adb5;
+$accent-2: #ccebed;
+$hover: #00adb5;
+
+@use "mixins";
+
+.container-flex {
+	@include mixins.flex(column, flex-start, flex-start);
+	gap: 20px;
+
+	width: 100vw;
+	min-height: 100vh;
+
+	background-color: $bg;
+}
+
+.tarjeta-container {
+	@include mixins.flex(row, center, center);
+
+	width: 100%;
+	height: 325px;
+	position: relative;
+
+	background-image: url("../assets/imagenes/card/bg-tarjetas.svg");
+	background-size: cover;
+	background-position: center;
+
+	margin-bottom: 200px;
+	.tarjeta-front {
+		position: absolute;
+		top: 75%;
+		left: 20px;
+		z-index: 2;
+
+		@include mixins.flex(column, center, flex-start);
+		gap: 10px;
+
+		width: 425px;
+		height: 250px;
+
+		border-radius: 10px;
+
+		padding: 20px;
+
+		background-image: url("../assets/imagenes/card/tarjeta-front-bg.svg");
+		background-size: cover;
+		background-position: center;
+
+		color: $accent-2;
+
+		.tajeta-logo {
+			margin-left: 10px;
+			margin-top: 10px;
+			align-self: flex-start;
+		}
+
+		.tarjeta-fechas {
+			@include mixins.flex(row, flex-start, flex-start);
+			gap: 8px;
+		}
+	}
+	.tarjeta-back {
+		position: absolute;
+		top: 30%;
+		left: 75px;
+		z-index: 1;
+
+		width: 425px;
+		height: 250px;
+
+		border-radius: 10px;
+
+		background-image: url("../assets/imagenes/card/tarjeta-back-bg.png");
+		background-size: cover;
+		background-position: center;
+
+		.tarjeta-codigo-seguridad {
+			position: absolute;
+			top: 110px;
+			right: 32px;
+
+			color: $text;
+			font-weight: 700;
+		}
+	}
+}
+
+.pagos-formulario {
+	@include mixins.flex(column, center, flex-start);
+	gap: 8px;
+
+	padding: 20px;
+
+	input[type="text"] {
+		width: 100%;
+	}
+
+	.formulario-fechas {
+		@include mixins.flex(row, center, center);
+		gap: 8px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container-flex {
+		flex-direction: row;
+	}
+}

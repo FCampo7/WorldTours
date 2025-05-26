@@ -1,0 +1,107 @@
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #eeeeee;
+}
+
+.tarjeta-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 325px;
+  position: relative;
+  background-image: url("../assets/imagenes/card/bg-tarjetas.svg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 200px;
+}
+.tarjeta-container .tarjeta-front {
+  position: absolute;
+  top: 75%;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 425px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 20px;
+  background-image: url("../assets/imagenes/card/tarjeta-front-bg.svg");
+  background-size: cover;
+  background-position: center;
+  color: #ccebed;
+}
+.tarjeta-container .tarjeta-front .tajeta-logo {
+  margin-left: 10px;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+.tarjeta-container .tarjeta-front .tarjeta-fechas {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tarjeta-container .tarjeta-back {
+  position: absolute;
+  top: 30%;
+  left: 75px;
+  z-index: 1;
+  width: 425px;
+  height: 250px;
+  border-radius: 10px;
+  background-image: url("../assets/imagenes/card/tarjeta-back-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+.tarjeta-container .tarjeta-back .tarjeta-codigo-seguridad {
+  position: absolute;
+  top: 110px;
+  right: 32px;
+  color: #222831;
+  font-weight: 700;
+}
+
+.pagos-formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px;
+}
+.pagos-formulario input[type=text] {
+  width: 100%;
+}
+.pagos-formulario .formulario-fechas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .container-flex {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=pagos.css.map */
