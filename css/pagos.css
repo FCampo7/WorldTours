@@ -1,16 +1,23 @@
+#main {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
 .container-flex {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #eeeeee;
+  /* ********************
+     *  * PAGOS FORMULARIO
+     *  ********************/
 }
-
-.tarjeta-container {
+.container-flex .tarjeta-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,19 +31,18 @@
   background-position: center;
   margin-bottom: 200px;
 }
-.tarjeta-container .tarjeta-front {
+.container-flex .tarjeta-container .tarjeta-front {
   position: absolute;
   top: 75%;
   left: 20px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 10px;
-  width: 425px;
-  height: 250px;
+  width: 368px;
+  height: 212px;
   border-radius: 10px;
   padding: 20px;
   background-image: url("../assets/imagenes/card/tarjeta-front-bg.svg");
@@ -44,12 +50,15 @@
   background-position: center;
   color: #ccebed;
 }
-.tarjeta-container .tarjeta-front .tajeta-logo {
-  margin-left: 10px;
-  margin-top: 10px;
-  align-self: flex-start;
+.container-flex .tarjeta-container .tarjeta-front p {
+  font-size: 14px;
 }
-.tarjeta-container .tarjeta-front .tarjeta-fechas {
+.container-flex .tarjeta-container .tarjeta-front .tarjeta-logo {
+  margin-bottom: 10px;
+  align-self: flex-start;
+  height: 32px;
+}
+.container-flex .tarjeta-container .tarjeta-front .tarjeta-fechas {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -57,27 +66,26 @@
   flex-wrap: wrap;
   gap: 8px;
 }
-.tarjeta-container .tarjeta-back {
+.container-flex .tarjeta-container .tarjeta-back {
   position: absolute;
   top: 30%;
   left: 75px;
   z-index: 1;
-  width: 425px;
-  height: 250px;
+  width: 368px;
+  height: 212px;
   border-radius: 10px;
   background-image: url("../assets/imagenes/card/tarjeta-back-bg.png");
   background-size: cover;
   background-position: center;
 }
-.tarjeta-container .tarjeta-back .tarjeta-codigo-seguridad {
+.container-flex .tarjeta-container .tarjeta-back .tarjeta-codigo-seguridad {
   position: absolute;
-  top: 110px;
+  top: 92px;
   right: 32px;
   color: #222831;
   font-weight: 700;
 }
-
-.pagos-formulario {
+.container-flex .pagos-formulario {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,22 +93,57 @@
   flex-wrap: wrap;
   gap: 8px;
   padding: 20px;
+  margin: 10px;
+  width: calc(100vw - 40px);
 }
-.pagos-formulario input[type=text] {
-  width: 100%;
-}
-.pagos-formulario .formulario-fechas {
+.container-flex .pagos-formulario .formulario-fechas {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
 }
+.container-flex .pagos-formulario .formulario-fechas input {
+  width: 75px;
+}
+.container-flex .pagos-formulario .formulario-titular {
+  width: 100%;
+}
+.container-flex .pagos-formulario .formulario-titular input {
+  width: 100%;
+}
+.container-flex .pagos-formulario .formulario-numero {
+  width: 100%;
+}
+.container-flex .pagos-formulario .formulario-numero input {
+  width: 100%;
+}
 
 @media (min-width: 768px) {
   .container-flex {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .container-flex .tarjeta-container {
+    flex: 2;
+    min-height: calc(100vh - 200px);
+  }
+  .container-flex .tarjeta-container .tarjeta-front {
+    top: 50%;
+    left: auto;
+    right: 70px;
+  }
+  .container-flex .tarjeta-container .tarjeta-back {
+    left: auto;
+    right: 10px;
+  }
+  .container-flex .pagos-formulario {
+    flex: 1;
   }
 }
 
